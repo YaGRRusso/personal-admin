@@ -11,6 +11,8 @@ export const Container = styled.li<{ active: boolean }>`
     margin-left: 6px;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
+    transition: all .3s;
+    box-shadow: ${props => props.active ? `0 3px 5px #00000050` : ''};
 
     :hover{
         transform: ${props => props.active ? '' : 'scale(1.05)'};
@@ -18,7 +20,7 @@ export const Container = styled.li<{ active: boolean }>`
 
     img{
         margin-bottom: 5px;
-        height: 32px;
+        height: 24px;
         width: auto;
     }
 
@@ -26,5 +28,6 @@ export const Container = styled.li<{ active: boolean }>`
         color: ${props => props.active ? props.theme.primaryColor : props.theme.color};
         font-weight: ${props => props.active ? 'bold' : '500'};
         text-transform: uppercase;
+        font-size: .9rem;
     }
     `

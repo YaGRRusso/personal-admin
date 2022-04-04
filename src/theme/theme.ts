@@ -9,6 +9,17 @@ export const darkTheme: DefaultTheme = {
 }
 
 export const GlobalStyles = createGlobalStyle`
+    ::-webkit-scrollbar{
+        width: 3px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f2f2f210;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #f2f2f250;
+        border-radius: 10px;
+    }
+
     body{
         color: ${props => props.theme.color};
         background-color: ${props => props.theme.backgroundColor};

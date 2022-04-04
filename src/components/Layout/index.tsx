@@ -1,4 +1,6 @@
 import { RouteList } from '../../router'
+import { useState } from 'react'
+
 import { AsideItem } from '../AsideItem'
 import * as C from './styles'
 
@@ -7,7 +9,7 @@ import StackImg from '../../images/icons/layers.svg'
 import EditImg from '../../images/icons/pencil.svg'
 import CvImg from '../../images/icons/cv.svg'
 import ProfileImg from '../../images/icons/person.svg'
-import { useState } from 'react'
+import LogoImg from '../../images/logo/WhiteLogo.png'
 
 export const Layout = () => {
     const [menuActive, setMenuActive] = useState(true)
@@ -18,6 +20,10 @@ export const Layout = () => {
             <C.Menu active={menuActive}>
                 <nav>
                     <ul>
+                        <div>
+                            <img src={LogoImg} alt="logo" style={{ width: '100%', padding: '28px' }} />
+                            <h1>Personal Admin</h1>
+                        </div>
                         <div>
                             <AsideItem name='Home' img={HomeImg} route='/' />
                             <AsideItem name='Stacks' img={StackImg} route='/stacks' />

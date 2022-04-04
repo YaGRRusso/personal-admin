@@ -1,4 +1,4 @@
-import { useNavigate, Location } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 import * as C from './styles'
 
@@ -10,7 +10,7 @@ type Props = {
 
 export const AsideItem = ({ name, route, img }: Props) => {
     const navigate = useNavigate();
-    const { pathname } = location
+    const { pathname } = useLocation()
     const isActive: boolean = pathname === route;
 
     return (

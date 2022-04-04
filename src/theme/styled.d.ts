@@ -2,8 +2,10 @@ import { DefaultTheme } from 'styled-components';
 
 declare module 'styled-components' {
     export interface DefaultTheme {
-        primaryColor: string,
         color: string,
         backgroundColor: string
+        primaryColor: string,
+        menuBackground: string;
+        cardBackground: string;
     }
 }

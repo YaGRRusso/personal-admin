@@ -1,5 +1,5 @@
 import * as C from './styles'
-import ErrorImg from '../../images/error.svg'
+import ErrorImg from '../../images/illustrations/error.svg'
 
 export const NotFoundPage = () => {
     return (

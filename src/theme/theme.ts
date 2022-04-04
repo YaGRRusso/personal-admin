@@ -1,15 +1,11 @@
 import { createGlobalStyle, DefaultTheme } from "styled-components";
 
-export const lightTheme: DefaultTheme = {
-    primaryColor: '#219ebc',
-    color: '#121212',
-    backgroundColor: '#f2f2f2'
-}
-
 export const darkTheme: DefaultTheme = {
-    primaryColor: '#219ebc',
     color: '#f2f2f2',
-    backgroundColor: '#121212'
+    primaryColor: '#1EA54C',
+    backgroundColor: '#24323F',
+    menuBackground: '#2E3E4A',
+    cardBackground: '#1D2733'
 }
 
 export const GlobalStyles = createGlobalStyle`

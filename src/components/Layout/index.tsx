@@ -13,7 +13,6 @@ import LogoImg from '../../images/logo/WhiteLogo.png'
 
 export const Layout = () => {
     const [menuActive, setMenuActive] = useState(true)
-    console.log(menuActive)
 
     return (
         <C.Container>

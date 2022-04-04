@@ -13,6 +13,8 @@ export const AsideItem = ({ name, route, img }: Props) => {
     const { pathname } = useLocation()
     const isActive: boolean = pathname === route;
 
+    console.log(pathname, pathname.toString())
+
     return (
         <C.Container onClick={() => navigate(route)} active={isActive}>
             <img src={isActive ? img.replace('.svg', '-fill.svg') : img} alt={name} />

@@ -20,16 +20,12 @@ export const Layout = () => {
                 <nav>
                     <ul>
                         <div>
-                            <img src={LogoImg} alt="logo" style={{ width: '100%', padding: '28px' }} />
-                            <h1>Personal Admin</h1>
+                            <AsideItem name='Home' icon={HomeImg} route='/' />
+                            <AsideItem name='Stacks' icon={StackImg} route='/stacks' />
+                            <AsideItem name='Edit' icon={EditImg} route='/edit' />
+                            <AsideItem name='CV' icon={CvImg} route='/cv' />
                         </div>
-                        <div>
-                            <AsideItem name='Home' img={HomeImg} route='/' />
-                            <AsideItem name='Stacks' img={StackImg} route='/stacks' />
-                            <AsideItem name='Edit' img={EditImg} route='/edit' />
-                            <AsideItem name='CV' img={CvImg} route='/cv' />
-                        </div>
-                        <AsideItem name='Profile' img={ProfileImg} route='/profile' />
+                        <AsideItem name='Profile' icon={ProfileImg} route='/profile' />
                     </ul>
                 </nav>
                 <C.MenuTogle onClick={() => { setMenuActive(!menuActive) }}>

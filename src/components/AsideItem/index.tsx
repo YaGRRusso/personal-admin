@@ -5,17 +5,17 @@ import * as C from './styles'
 type Props = {
     name: string,
     route: string,
-    img: string,
+    icon: string,
 }
 
-export const AsideItem = ({ name, route, img }: Props) => {
+export const AsideItem = ({ name, route, icon }: Props) => {
     const navigate = useNavigate();
     const { pathname } = useLocation()
     const isActive: boolean = pathname === route;
 
     return (
         <C.Container onClick={() => navigate(route)} active={isActive}>
-            <img src={isActive ? img.replace('.svg', '-fill.svg') : img} alt={name} />
+            <img src={icon} alt={name} />
             <span>{name}</span>
         </C.Container>
     )

@@ -1,11 +1,10 @@
-import * as C from './styles'
 import ErrorImg from '../../images/illustrations/error.svg'
 
 export const NotFoundPage = () => {
     return (
-        <C.Container>
-            <img src={ErrorImg} alt="página não encontrada" />
+        <div className="container">
+            <img src={ErrorImg} alt="página não encontrada" style={{ width: '280px', height: '280px' }} />
             <strong>Página não encontrada!</strong>
-        </C.Container>
+        </div>
     )
 }

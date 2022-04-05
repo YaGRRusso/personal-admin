@@ -22,6 +22,7 @@ export const Container = styled.li<{ active: boolean }>`
         margin-bottom: 5px;
         height: 24px;
         width: auto;
+        filter: ${props => props.active ? 'brightness(0) saturate(100%) invert(51%) sepia(28%) saturate(1184%) hue-rotate(88deg) brightness(95%) contrast(90%)' : ''} 
     }
 
     span{
@@ -30,4 +31,4 @@ export const Container = styled.li<{ active: boolean }>`
         text-transform: uppercase;
         font-size: .9rem;
     }
-    `
+`

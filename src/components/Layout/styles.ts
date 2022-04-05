@@ -17,13 +17,6 @@ export const Menu = styled.aside<{ active: boolean }>`
     transition: all .3s;
     transform: ${props => props.active ? 'translateX(0)' : 'translateX(-120px)'};
 
-    h1{
-        margin-top: -38px;
-        text-align: center;
-        font-size: 1rem;
-        line-height: 1;
-    }
-
     nav, ul{
         height: 100%;
     }
@@ -84,9 +77,8 @@ export const Pages = styled.div<{ active: boolean }>`
     margin-left: ${props => props.active ? menuWidth : '0'};
     flex: 1;
     transition: all .3s;
-    padding: 15px 10px;
 
     @media (max-width: 768px){
-        margin-left: 0;
+        margin-left: auto;
     }
 `

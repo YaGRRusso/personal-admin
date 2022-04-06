@@ -39,6 +39,10 @@ export const GlobalStyles = createGlobalStyle`
         justify-content: center;
         width: 100%;
         margin: 0 auto;
+
+        @media (max-width: 768px){
+            flex-direction: column;
+        }
     }
     .cardItem{
         display: flex;

@@ -2,24 +2,19 @@ import { ChangeEventHandler, FormEvent, useState } from 'react'
 import * as C from './styles'
 
 import BlankImg from '../../images/icons/image.svg'
+import { api } from '../../api';
 
 export const StacksPage = () => {
     const [nameInput, setNameInput] = useState('');
-    const [imageInput, setImageInput] = useState<any>();
+    const [imageInput, setImageInput] = useState<File>();
 
     const handleFormSubmit = (ev: FormEvent<HTMLFormElement>) => {
         ev.preventDefault()
 
         const formData = new FormData(ev.currentTarget)
+        const file = formData.get('imageInput') as File;
 
-        const file = formData.get('image') as File
-        setImageInput(URL.createObjectURL(file))
-    }
-
-    const handleChangeImage = (ev: any) => {
-        if (ev.target.files && ev.target.files.length > 0) {
-            setImageInput(ev.files[0])
-        }
+        api.sendImage(file)
     }
 
     return (
@@ -34,7 +29,7 @@ export const StacksPage = () => {
                     </label>
                     <label>
                         Imagem:
-                        <input type="file" name='image' onChange={handleChangeImage} />
+                        <input type="file" name='imageInput' onChange={ev => ev.target.files ? setImageInput(ev.target.files[0]) : false} />
                     </label>
                 </C.Form>
                 <C.StackDisplay className='cardItem'>

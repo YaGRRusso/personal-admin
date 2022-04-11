@@ -12,7 +12,7 @@ export const api = {
             },
             data: image
         })
-        console.log(JSON.stringify(response.data))
+        console.log(response.data.link)
         return response
     }
 }

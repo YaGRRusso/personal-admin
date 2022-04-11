@@ -35,7 +35,7 @@ export const StackDisplay = styled.div`
     flex: 1;
 
     img{
-        height: 100%;
+        height: 280px;
         min-width: 80px;
         filter: brightness(0) invert(1);
     }

@@ -1,21 +1,17 @@
 import axios from "axios"
 
-const baseURL = 'https://api.anonfiles.com/'
+const baseURL = 'https://api.imgur.com/3/image/'
 
 export const api = {
     sendImage: async (image: File) => {
         let response = await axios({
-            url: baseURL + '/upload',
-            data: image,
+            url: baseURL,
             method: 'POST',
             headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-                'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
-                'Content-Type': 'multipart/form-data'
-            }
+                Authorization: 'Client-ID a4895ad056588bd'
+            },
+            data: image
         })
-        console.log(response)
         return response
     }
 }

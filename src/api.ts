@@ -12,6 +12,7 @@ export const api = {
             },
             data: image
         })
+        console.log(response)
         return response
     }
 }

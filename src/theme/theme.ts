@@ -5,7 +5,8 @@ export const darkTheme: DefaultTheme = {
     primaryColor: '#1EA54C',
     backgroundColor: '#24323F',
     menuBackground: '#2E3E4A',
-    cardBackground: '#1D2733'
+    cardBackground: '#1D2733',
+    border: '#f2f2f290'
 }
 
 export const GlobalStyles = createGlobalStyle`
@@ -27,33 +28,11 @@ export const GlobalStyles = createGlobalStyle`
         flex-direction: column;
         width: 95%;
         margin: auto;
-        padding: 20px 0;
+        padding: 60px 0;
     }
     .pageTitle{
         font-size: 2rem;
-        margin-bottom: 30px;
-    }
-    .flexLine{
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-        width: 100%;
-        margin: 0 auto;
-
-        @media (max-width: 768px){
-            flex-direction: column;
-        }
-    }
-    .cardItem{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-color: ${props => props.theme.cardBackground};
-        border-radius: 10px;
-        padding: 15px;
-        margin: 10px;
-        box-shadow: 1px 3px 5px #00000060;
+        margin-bottom: 60px;
     }
 
     body{

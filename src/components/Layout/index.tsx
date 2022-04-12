@@ -9,7 +9,6 @@ import StackImg from '../../images/icons/layers.svg'
 import EditImg from '../../images/icons/pencil.svg'
 import CvImg from '../../images/icons/cv.svg'
 import ProfileImg from '../../images/icons/person.svg'
-import LogoImg from '../../images/logo/WhiteLogo.png'
 
 export const Layout = () => {
     const [menuActive, setMenuActive] = useState(true)
@@ -21,7 +20,7 @@ export const Layout = () => {
                     <ul>
                         <div>
                             <AsideItem name='Home' icon={HomeImg} route='/' />
-                            <AsideItem name='Stacks' icon={StackImg} route='/stacks' />
+                            <AsideItem name='Portfolio' icon={StackImg} route='/portfolio' />
                             <AsideItem name='Edit' icon={EditImg} route='/edit' />
                             <AsideItem name='CV' icon={CvImg} route='/cv' />
                         </div>
